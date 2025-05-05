@@ -1,4 +1,4 @@
-const { Pokemon, User, Category } = require('../models');
+const { Pokemon, User, Team } = require('../models');
 const { Op } = require('sequelize');
 
 class PokemonService {

@@ -1,7 +1,7 @@
 {
-  "name": "pokemon-manager-server",
+  "name": "pokedex-server",
   "version": "1.0.0",
-  "description": "Pokemon Manager API with Sequelize",
+  "description": "Bill's PC API with Sequelize",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

@@ -4,6 +4,8 @@ import { useAuth } from '../hooks/useAuth';
 import PokemonList from '../components/PokemonList';
 import PokemonForm from '../components/PokemonForm';
 
+
+
 function Dashboard() {
   const { fetchPokemons, pokemons, loading, error, setCurrentPokemon } = usePokemons();
   const { logout } = useAuth();
@@ -34,14 +36,14 @@ function Dashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <h1 className="text-xl font-semibold">Pokemon Dashboard</h1>
+              <h1 className="text-xl font-semibold">Trainer's Dashboard</h1>
             </div>
             <div className="flex items-center space-x-4">
               <button
                 onClick={handleCreatePokemon}
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
               >
-                Create Pokemon
+                Create Pokemon Team
               </button>
               <button
                 onClick={logout}

@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const { User, Pokemon, Category } = require('../models');
+const { User, Pokemon, Team } = require('../models');
 
 const seedDatabase = async () => {
   try {
@@ -22,13 +22,13 @@ const seedDatabase = async () => {
     console.log('\n----- USERS SEEDED -----\n');
     
     // Create categories
-    const categories = await Category.bulkCreate([
-      { name: 'Work', color: '#3B82F6' },
-      { name: 'Personal', color: '#10B981' },
-      { name: 'Shopping', color: '#F59E0B' },
-      { name: 'Health', color: '#EF4444' },
-    ]);
-    console.log('\n----- CATEGORIES SEEDED -----\n');
+    // const categories = await Category.bulkCreate([
+    //   { name: 'Work', color: '#3B82F6' },
+    //   { name: 'Personal', color: '#10B981' },
+    //   { name: 'Shopping', color: '#F59E0B' },
+    //   { name: 'Health', color: '#EF4444' },
+    // ]);
+    // console.log('\n----- CATEGORIES SEEDED -----\n');
     
     // Create pokemons
     const pokemons = await Pokemon.bulkCreate([
