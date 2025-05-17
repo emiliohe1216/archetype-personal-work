@@ -4,7 +4,7 @@ import { useAuth } from "../hooks/useAuth";
 import PokemonList from "../components/PokemonList";
 import PokemonForm from "../components/PokemonForm";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
 function Dashboard() {
   const { fetchPokemons, pokemons, loading, error, setCurrentPokemon } =
@@ -70,13 +70,10 @@ function Dashboard() {
         {/* <span style={{ display: "block", textAlign: "left" }}>
           id: {item.id}
         </span> */}
-        <span style={{ display: "block", textAlign: "left" }}>
-          {item.name}
-        </span>
+        <span style={{ display: "block", textAlign: "left" }}>{item.name}</span>
       </>
     );
   };
-
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -84,7 +81,9 @@ function Dashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <h1 className="text-xl font-semibold">Trainer's Dashboard</h1>
+              <h1 className="text-xl font-semibold silkscreen-regular">
+                Trainer's Dashboard
+              </h1>
             </div>
             <div className="flex items-center space-x-4">
               <button
@@ -114,7 +113,9 @@ function Dashboard() {
         {showSearch && (
           <div className="mb-6">
             <div style={{ width: "100%", maxWidth: "600px", margin: "0 auto" }}>
-              <h2 className="text-lg font-medium mb-2">Search for a Pokémon</h2>
+              <h2 className="text-lg font-medium mb-2 silkscreen">
+                Pokédex Library
+              </h2>
               {allPokemonData.length > 0 ? (
                 <ReactSearchAutocomplete
                   items={allPokemonData}
@@ -130,7 +131,7 @@ function Dashboard() {
                     boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)",
                     height: "44px",
                   }}
-                  placeholder="Type to search for a Pokémon..."
+                  placeholder="Search for your Pokémon..."
                 />
               ) : (
                 <div className="p-4 bg-yellow-50 border border-yellow-100 text-yellow-800 rounded">
